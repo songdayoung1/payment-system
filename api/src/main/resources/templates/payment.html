@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결제 페이지</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>결제 페이지</h1>
+    <div>
+        <label>상품명:</label>
+        <span id="product-name">스마트워치</span>
+    </div>
+    <div>
+        <label>가격:</label>
+        <span id="product-price">10</span>
+    </div>
+    <button id="pay-button">결제하기</button>
+    <button id="pay-cancel-button">취소하기</button>
+</div>
+<script th:inline="javascript">
+</script>
+<!-- 외부 JavaScript 파일 연결 -->
+<script src="https://cdn.portone.io/v2/browser-sdk.js"></script>
+<script src="/payment.js"></script>
+</body>
+</html>
